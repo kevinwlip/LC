@@ -6,19 +6,16 @@ Write a function to find the longest common prefix string amongst an array of st
 If there is no common prefix, return an empty string "".
 
 Example 1:
-
     Input: ["flower","flow","flight"]
     Output: "fl"
 
 Example 2:
-
     Input: ["dog","racecar","car"]
     Output: ""
     Explanation: There is no common prefix among the input strings.
 
 Note:
-
-All given inputs are in lowercase letters a-z.
+    All given inputs are in lowercase letters a-z.
 """
 
 class Solution(object):
@@ -96,14 +93,15 @@ print(a.longestCommonPrefix(["leets","leetcode","leetc", "leeds"]))
 class Solution:
     def longestCommonPrefix(self, strs):
 
+        prefix = ""
         for i in xrange(len(min(strs))):   # xrange returns a generator object, i = 0,1,2,..., etc
-            c=strs[0][i]
-            if all(a[i]==c for a in strs):
-                prefix+=c
+            c = strs[0][i]
+            if all(a[i] == c for a in strs):
+                prefix += c
             else:
                 break
-
-        return prefix if len(strs) == 0 else ""
+        print("length", len(strs))
+        return prefix if len(strs) != 0 else ""
 
 a = Solution()
 print(a.longestCommonPrefix(["leets","leetcode","leetc", "leeds"]))
