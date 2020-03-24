@@ -23,6 +23,8 @@ class Solution(object):
                 try:
                     if next >= 0 and next < len(nums):
                         ret = nums[start] + nums[next]
+                except:
+                    pass
                 if ret == target:
                     return [start, next]
                 next += 1
