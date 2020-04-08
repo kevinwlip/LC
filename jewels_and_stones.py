@@ -27,8 +27,8 @@ class Solution(object):
         :rtype: int
         """
 
-        if len(J) > 50 or len(S) > 50 or len(list(set(J))) != len(J):
-            return 0
+        #if len(J) > 50 or len(S) > 50 or len(list(set(J))) != len(J):
+        #    return 0
 
         result = 0
         for i in J:

@@ -37,7 +37,7 @@ class Solution(object):
         keys = [str(i) if i < 10 else str(i)+"#" for i in range(1, 27)]
         values = [chr(i) for i in range(ord('a'), ord('z')+1)]
         mapping = dict(zip(keys, values))
-
+        print(mapping)
         result, i = "", 0
         while i < len(s):
             try:

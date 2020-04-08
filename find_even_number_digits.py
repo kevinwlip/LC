@@ -32,13 +32,13 @@ class Solution(object):
         :rtype: int
         """
 
-        if len(nums) < 1 or len(nums) > 500:
-            return 0
+        #if len(nums) < 1 or len(nums) > 500:
+        #    return 0
 
         result = 0
         for count, i in enumerate(nums):
-            if nums[count] < 1 or nums[count] > 10**5:
-                return 0
+        #    if nums[count] < 1 or nums[count] > 10**5:
+        #        return 0
 
             if len(str(i)) % 2 == 0:
                 result += 1

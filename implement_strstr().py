@@ -19,13 +19,10 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-
+        
         if not needle:
             return 0
-        elif needle not in haystack:
-            return -1
-        else:
-            return haystack.index(needle)
+        return -1 if needle not in haystack else haystack.index(needle)
 
 a = Solution()
 print(a.strStr("haystack", "bba"))

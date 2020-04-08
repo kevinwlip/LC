@@ -31,7 +31,7 @@ class Solution(object):
 
         insert = None
         for count, i in enumerate(nums):
-            print(i)
+            #print(i)
             if i == target:
                 insert = count
                 break

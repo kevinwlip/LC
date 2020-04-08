@@ -58,4 +58,4 @@ class Solution(object):
 
 
 a = Solution()
-print(a.removeOuterParentheses("(()())(())"))
+print(a.removeOuterParentheses("(()())(())(()(()))"))

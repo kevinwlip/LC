@@ -30,7 +30,7 @@ class Solution(object):
             else:
                 prev = nums[count]
 
-        return nums
+        return len(nums)
 
 a = Solution()
 print(a.removeDuplicates([0,0,1,1,1,2,2,3,3,4]))

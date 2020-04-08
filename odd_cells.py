@@ -34,8 +34,6 @@ class Solution(object):
         for i in indices:
             row = i[0]
             col = i[1]
-            print(row)
-            print(col)
 
             # increment the col
             for j in range(0, len(matrix)):
@@ -54,3 +52,48 @@ class Solution(object):
 
 a = Solution()
 print(a.oddCells(2,3,[[0,1],[1,1]]))
+
+"""
+### O(n+m) using two arrays instead of O(nm) solution using a matrix ###
+class Solution(object):
+    def oddCells(self, n, m, indices):
+        # :type n: int
+        # :type m: int
+        # :type indices: List[List[int]]
+        # :rtype: int
+
+        rows, cols = [0] * n, [0] * m
+		for i, j in indices:
+		    rows[i] += 1
+			cols[j] += 1
+
+        total  = 0
+		for row in rows:
+		    for col in cols:
+			    total += (row + col) % 2
+		return total
+
+a = Solution()
+print(a.oddCells(2,3,[[0,1],[1,1]]))
+"""
+
+"""
+### Optimal Solution ###
+class Solution(object):
+    def oddCells(self, n, m, indices):
+        # :type n: int
+        # :type m: int
+        # :type indices: List[List[int]]
+        # :rtype: int
+
+        rows, cols = [0] * n, [0] * m
+
+        for i, j in indices:
+            rows[i] += 1
+            cols[j] += 1
+
+        return sum((r + c) % 2 for r in rows for c in cols)
+
+a = Solution()
+print(a.oddCells(2,3,[[0,1],[1,1]]))
+"""
