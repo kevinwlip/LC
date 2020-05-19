@@ -31,6 +31,10 @@ class Solution(object):
         :rtype: str
         """
 
+        return 'a' * n if n % 2 == 1 else ('a' * (n-1) + 'b')
+
+'''
+### Not a valid solution
         letters, i, result = {}, 0, ""
         while i != n:
             letter = random.choice(string.ascii_letters).lower()
@@ -47,9 +51,8 @@ class Solution(object):
         for k, v in letters.items():
             result += k * v
 
-        #print(letters)
         return result
-
+'''
 
 a = Solution()
 print(a.generateTheString(10))
