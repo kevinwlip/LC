@@ -32,7 +32,7 @@ class Solution(object):
                 vals.append(strs[count][char_count])
                 if count == (len(strs)-1) and all(x == strs[count][char_count] for x in vals):   # The all() checks that all values are the same in the list
                     prefix.append(strs[count][char_count])
-                    vals.clear()
+                    vals[:] = []
                     char_count += 1
                     test(char_count)
 
@@ -76,7 +76,6 @@ class Solution:
         # :rtype: str
 
         prefix=[]
-        num = len(strs)
         for x in zip(*strs):   # '*strs' unpacks the iterable, 'zip()' is then applied on the elements
             if len(set(x)) == 1:
                 prefix.append(x[0])

@@ -17,23 +17,13 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        start, next = 0, 0
-        for pos in nums[start:]:
-            for num in nums[start:]:
-                try:
-                    if next >= 0 and next < len(nums):
-                        ret = nums[start] + nums[next]
-                except:
-                    pass
-                if ret == target:
-                    return [start, next]
-                next += 1
-            start += 1
-            next = start + 1
+        for i in range(len(nums)):
+            for j in range(i+1):
+                if i != j and nums[i] + nums[j] == target:
+                    return [i, j]
 
 a = Solution()
-print(a.twoSum([2, 7, 11, 15], 26))
-
+print(a.twoSum([3,2,4], 6))
 
 """
 ### Just the function ###
